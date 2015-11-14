@@ -39,8 +39,8 @@
     self.showLabel.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.showLabel];
     
-    self.button = [UIButton buttonWithType:UIButtonTypeSystem];
-    self.button.frame = CGRectMake(20, 300, self.view.bounds.size.width-40, 300);
+    self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.button.frame = CGRectMake(20, 300, self.view.bounds.size.width-40, 30);
     [self.button setTitle:@"扫描二维码" forState:UIControlStateNormal];
     //    [self.button setTitle:@"停止" forState:UIControlStateSelected];
     [self.button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];

@@ -9,12 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController<AVCaptureMetadataOutputObjectsDelegate>
+@interface ViewController : UIViewController
 
 @property (nonatomic, strong) UILabel *showLabel;
 @property (nonatomic, strong) UIButton *button;
-@property (nonatomic, strong) AVCaptureSession *session;
-@property (nonatomic, strong) AVCaptureVideoPreviewLayer *preview;
+
 
 
 @end

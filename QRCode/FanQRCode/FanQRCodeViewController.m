@@ -383,6 +383,8 @@
             return;
         }
     }
+    self.scanResultBlock(@"解析失败",NO);
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 #pragma mark - 其他
 //根据不同的提示信息，创建警告框
