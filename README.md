@@ -1,6 +1,10 @@
 # FanQRCode
 QRCode
 
+
+![二维码](https://github.com/fanxiangyang/FanQRCode/blob/master/erweima.PNG
+?raw=true)
+
 ###  功能介绍
 
 ##### 功能介绍：封装系统自动二维码扫描与图片二维码解析 具体使用如下
