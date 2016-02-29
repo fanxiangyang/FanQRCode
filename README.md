@@ -2,8 +2,7 @@
 QRCode
 
 
-![二维码](https://github.com/fanxiangyang/FanQRCode/blob/master/erweima.PNG
-?raw=true)
+![二维码](https://github.com/fanxiangyang/FanQRCode/blob/master/erweima.PNG?raw=true)
 
 ###  功能介绍
 
