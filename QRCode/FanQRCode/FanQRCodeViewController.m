@@ -229,7 +229,10 @@
 #pragma mark - 开启关闭闪光灯
 -(void)flashLightClick:(UIButton *)btn{
     AVCaptureDevice * device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    
+    if(![device isTorchModeSupported:AVCaptureTorchModeOn]){
+        [self showAlertWithMessage:@"该设备不能打开闪光灯"];
+        return;
+    }
     if (device.torchMode==AVCaptureTorchModeOff) {
         //闪光灯开启
         [device lockForConfiguration:nil];
