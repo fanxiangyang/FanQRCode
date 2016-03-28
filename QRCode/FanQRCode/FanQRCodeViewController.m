@@ -154,6 +154,12 @@
 #pragma mark 开启相机
 - (void)initCapture
 {
+    AVAuthorizationStatus deviceStatus=[AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if (deviceStatus==AVAuthorizationStatusRestricted||deviceStatus==AVAuthorizationStatusDenied) {
+        //用户禁止了摄像机权限
+        [self showAlertWithMessage:@"您禁止了该摄像机权限，请在设置界面开启！"];
+        return;
+    }
     self.captureSession = [[AVCaptureSession alloc] init];
     // 摄像头设备
     AVCaptureDevice* inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
