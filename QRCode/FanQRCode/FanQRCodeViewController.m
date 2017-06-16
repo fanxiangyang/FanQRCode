@@ -181,8 +181,13 @@
         [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
         [self.captureSession setSessionPreset:AVCaptureSessionPresetHigh];
         [self.captureSession addOutput:_output];
-        _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
-        
+//        _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
+        _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode,
+                                       AVMetadataObjectTypeEAN13Code,
+                                       AVMetadataObjectTypeEAN8Code,
+                                       AVMetadataObjectTypeCode128Code,
+                                       AVMetadataObjectTypeCode39Code,
+                                       AVMetadataObjectTypeCode93Code];
         if (!self.captureVideoPreviewLayer) {
             // 设置预览层信息
             self.captureVideoPreviewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.captureSession];

@@ -33,7 +33,7 @@
 typedef void(^ScanResultBlock)(NSString* resultSrt,BOOL isSuccess);
 
 
-#define iOS7_8_QR [[[UIDevice currentDevice] systemVersion]floatValue]>=7
+#define iOS7_8_QR [[[UIDevice currentDevice] systemVersion]floatValue]>=7.0
 #define kWidth_QR ([UIScreen mainScreen].bounds.size.width)
 #define kHeight_QR ([UIScreen mainScreen].bounds.size.height)
 #define kHeight_QRRect 250  //取景框的高度
